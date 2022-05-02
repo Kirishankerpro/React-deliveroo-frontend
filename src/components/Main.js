@@ -55,7 +55,7 @@ function Main() {
                             </div>
                             <div className="items-image">
                               {meals.picture ? (
-                                <img src={meals.picture} alt="food picture" />
+                                <img src={meals.picture} alt="food" />
                               ) : (
                                 <img src={Couvert} alt="couvert" />
                               )}
