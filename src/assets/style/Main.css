@@ -166,3 +166,13 @@ hr {
   width: 80%;
   height: 15vh;
 }
+
+@media (min-width: 1500px) {
+  .card {
+    width: 77%;
+    /* background-color: #01cdbd; */
+  }
+  .buy {
+    width: 23%;
+  }
+}
