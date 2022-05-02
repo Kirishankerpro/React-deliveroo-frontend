@@ -56,7 +56,7 @@ hr {
   width: 79%;
 }
 .card {
-  width: 100%;
+  width: 69%;
   display: flex;
   flex-direction: column;
   /* background-color: #01cdbd; */
@@ -74,9 +74,9 @@ hr {
 .boxelements {
   display: flex;
   align-items: center;
-  /*   background-color: lightgreen; */
+  /* background-color: lightgreen; */
   flex-wrap: wrap;
-  width: 69%;
+  width: 100%;
   margin-bottom: 27px;
 }
 
@@ -121,4 +121,40 @@ hr {
   height: 150px;
   width: 150px;
   border-radius: 9px;
+}
+
+/* panier */
+
+.buy {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: sticky;
+  top: 20px;
+  height: 30vh;
+  width: 31%;
+  background-color: white;
+  margin-top: 10px;
+  box-shadow: 2px 8px 22px lightgray;
+}
+
+.buy-items {
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 91%;
+  margin: 15px 0;
+  background-color: #bac3c3;
+}
+
+.buy-items-list {
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 15vh;
 }

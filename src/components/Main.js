@@ -68,6 +68,14 @@ function Main() {
                 );
               })}
             </div>
+            <div className="buy">
+              <div className="buy-items">
+                <h2> Valider mon Panier </h2>
+              </div>
+              <div className="buy-items-list">
+                <p> Votre panier est vide </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
