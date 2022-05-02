@@ -1,0 +1,15 @@
+.header {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.container img {
+  height: 65px;
+}
