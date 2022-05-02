@@ -116,6 +116,10 @@ hr {
   -webkit-box-orient: vertical;
 }
 
+#price {
+  margin-top: 15px;
+}
+
 .items-image > img {
   object-fit: cover;
   height: 150px;

@@ -51,7 +51,7 @@ function Main() {
                             <div className="items" key={index}>
                               <h3> {meals.title} </h3>
                               <p> {meals.description}</p>
-                              <p> {meals.price}</p>
+                              <p id="price"> {meals.price} € </p>
                             </div>
                             <div className="items-image">
                               {meals.picture ? (
