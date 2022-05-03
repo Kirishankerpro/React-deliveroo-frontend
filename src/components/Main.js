@@ -39,11 +39,7 @@ function Main() {
 
                 return (
                   <div className="boxes" key={index}>
-                    {AtLeastOneMeal === true ? (
-                      <h2> {elements.name}</h2>
-                    ) : (
-                      <h2> </h2>
-                    )}
+                    {AtLeastOneMeal === true && <h2> {elements.name}</h2>}
                     <div className="boxelements" key={index}>
                       {elements.meals.map((meals, index) => {
                         return (
