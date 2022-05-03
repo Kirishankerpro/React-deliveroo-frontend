@@ -5,7 +5,7 @@ const Meals = ({ meals, index, shopcart, setShopcart }) => {
     <div
       className="boxelements-item"
       onClick={() => {
-        setShopcart(shopcart + 1);
+        /* setShopcart(shopcart + 1); */
       }}
     >
       <div className="items" key={index}>

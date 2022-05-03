@@ -36,12 +36,13 @@ function Main() {
             <div className="card">
               {data.categories.map((elements, index) => {
                 return (
-                  <div className="boxes">
+                  <div className="boxes" key={index}>
                     <h2> {elements.name}</h2>
                     <div className="boxelements" key={index}>
                       {elements.meals.map((meals, index) => {
                         return (
                           <Meals
+                            key={index}
                             meals={meals}
                             index={index}
                             shopcart={shopcart}
