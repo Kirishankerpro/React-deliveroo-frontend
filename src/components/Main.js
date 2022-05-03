@@ -39,7 +39,6 @@ function Main() {
           <div className="cards">
             <div className="card">
               {data.categories.map((elements, index) => {
-                console.log(elements.name);
                 return (
                   <div className="boxes">
                     <h2> {elements.name}</h2>
