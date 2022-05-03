@@ -197,6 +197,10 @@ hr {
     /* background-color: #01cdbd; */
   }
   .buy {
+    width: 100%;
+  }
+
+  .shoppingcart {
     width: 23%;
   }
 }
