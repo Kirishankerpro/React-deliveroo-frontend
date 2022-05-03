@@ -52,10 +52,8 @@ function Main() {
                               <h3> {meals.title} </h3>
                               <p> {meals.description}</p>
                               <p id="price">
-                                {" "}
                                 {meals.price} €{" "}
                                 <span id="popular">
-                                  {" "}
                                   {meals.popular ? "⭐️ Populaire" : ""}
                                 </span>
                               </p>
