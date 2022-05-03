@@ -12,4 +12,5 @@
 
 .container img {
   height: 65px;
+  object-fit: cover;
 }
