@@ -35,9 +35,12 @@ function Main() {
           <div className="cards">
             <div className="card">
               {data.categories.map((elements, index) => {
+                const AtLeastOneMeal = elements.meals.length > 0;
+                const title = elements.name;
+
                 return (
                   <div className="boxes" key={index}>
-                    <h2> {elements.name}</h2>
+                    {AtLeastOneMeal === true ? <h2> {title}</h2> : <h2> </h2>}
                     <div className="boxelements" key={index}>
                       {elements.meals.map((meals, index) => {
                         return (
