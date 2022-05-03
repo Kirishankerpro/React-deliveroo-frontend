@@ -117,6 +117,7 @@ hr {
 }
 
 #price {
+  width: 95%;
   margin-top: 15px;
 }
 
@@ -169,6 +170,12 @@ hr {
   align-items: center;
   width: 80%;
   height: 15vh;
+}
+
+#popular {
+  margin-left: 14px;
+  font-weight: bolder;
+  color: orange;
 }
 
 @media (min-width: 1500px) {

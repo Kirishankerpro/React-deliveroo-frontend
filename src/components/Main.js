@@ -51,7 +51,14 @@ function Main() {
                             <div className="items" key={index}>
                               <h3> {meals.title} </h3>
                               <p> {meals.description}</p>
-                              <p id="price"> {meals.price} € </p>
+                              <p id="price">
+                                {" "}
+                                {meals.price} €{" "}
+                                <span id="popular">
+                                  {" "}
+                                  {meals.popular ? "⭐️ Populaire" : ""}
+                                </span>
+                              </p>
                             </div>
                             <div className="items-image">
                               {meals.picture ? (
