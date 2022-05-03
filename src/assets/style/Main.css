@@ -146,7 +146,7 @@ hr {
 
 .buy-items {
   color: white;
-  border: 2px solid #bac3c3;
+  border: 2px solid #01cdbd;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -154,12 +154,12 @@ hr {
   height: 50px;
   width: 88%;
   margin: 15px 0;
-  background-color: #bac3c3;
+  background-color: #01cdbd;
 }
 
 .buy-items:hover {
   background-color: white;
-  color: #bac3c3;
+  color: #01cdbd;
   cursor: pointer;
 }
 
