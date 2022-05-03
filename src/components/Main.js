@@ -44,7 +44,6 @@ function Main() {
                     <h2> {elements.name}</h2>
                     <div className="boxelements" key={index}>
                       {elements.meals.map((meals, index) => {
-                        console.log(meals);
                         return (
                           <div className="boxelements-item">
                             <div className="items" key={index}>
