@@ -1,11 +1,15 @@
 import "../assets/style/Main.css";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import Couvert from "../assets/img/couvert.jpeg";
+
+import Title from "../components/Title";
+import Meals from "./Meals";
+import Shoppingcart from "./Shoppingcart";
 
 function Main() {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [shopcart, setShopcart] = useState([]);
 
   const fetchData = async () => {
     const response = await axios.get(
@@ -26,15 +30,7 @@ function Main() {
     <div>
       <hr />
       <div className="main">
-        <div className="title">
-          <div className="title-title">
-            <h1> {data.restaurant.name} </h1>
-            <p> {data.restaurant.description} </p>
-          </div>
-          <div className="title-image">
-            <img src={data.restaurant.picture} alt="table with foods" />
-          </div>
-        </div>
+        <Title data={data} />
         <div className="gray">
           <div className="cards">
             <div className="card">
@@ -45,25 +41,12 @@ function Main() {
                     <div className="boxelements" key={index}>
                       {elements.meals.map((meals, index) => {
                         return (
-                          <div className="boxelements-item">
-                            <div className="items" key={index}>
-                              <h3> {meals.title} </h3>
-                              <p> {meals.description}</p>
-                              <p id="price">
-                                {meals.price} €{" "}
-                                <span id="popular">
-                                  {meals.popular ? "⭐️ Populaire" : ""}
-                                </span>
-                              </p>
-                            </div>
-                            <div className="items-image">
-                              {meals.picture ? (
-                                <img src={meals.picture} alt="food" />
-                              ) : (
-                                <img src={Couvert} alt="couvert" />
-                              )}
-                            </div>
-                          </div>
+                          <Meals
+                            meals={meals}
+                            index={index}
+                            shopcart={shopcart}
+                            setShopcart={setShopcart}
+                          />
                         );
                       })}
                     </div>
@@ -71,14 +54,7 @@ function Main() {
                 );
               })}
             </div>
-            <div className="buy">
-              <div className="buy-items">
-                <h2> Valider mon Panier </h2>
-              </div>
-              <div className="buy-items-list">
-                <p> Votre panier est vide </p>
-              </div>
-            </div>
+            <Shoppingcart shopcart={shopcart} />
           </div>
         </div>
       </div>
