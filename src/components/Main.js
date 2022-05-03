@@ -49,6 +49,7 @@ function Main() {
                             index={index}
                             shopcart={shopcart}
                             setShopcart={setShopcart}
+                            elements={elements}
                           />
                         );
                       })}

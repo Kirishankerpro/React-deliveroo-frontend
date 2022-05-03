@@ -1,15 +1,18 @@
 import Couvert from "../assets/img/couvert.jpeg";
 // css is => Main.js
-const Meals = ({ meals, index, shopcart, setShopcart }) => {
+const Meals = ({ meals, index, shopcart, setShopcart, elements }) => {
   return (
     <div
       className="boxelements-item"
       onClick={() => {
-        /* setShopcart(shopcart + 1); */
+        const newElement = [...shopcart];
+        newElement.push({ name: meals.title, price: meals.price });
+        setShopcart(newElement);
+        console.log(newElement);
       }}
     >
       <div className="items" key={index}>
-        <h3> {meals.title} </h3>
+        <h3> {meals.title} hello </h3>
         <p> {meals.description}</p>
         <p id="price">
           {meals.price} €

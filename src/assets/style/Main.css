@@ -136,8 +136,8 @@ hr {
   flex-direction: column;
   position: sticky;
   top: 18px;
-  height: 30vh;
   width: 100%;
+  min-height: 25vh;
   border-radius: 8px;
   background-color: white;
   margin-top: 20px;
@@ -170,7 +170,6 @@ hr {
   justify-content: center;
   align-items: center;
   width: 80%;
-  height: 15vh;
 }
 
 .buy-items-list > p {
@@ -186,8 +185,9 @@ hr {
 /* shoppingcart */
 
 .shoppingcart {
+  align-items: stretch;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 30%;
 }
 
@@ -203,4 +203,17 @@ hr {
   .shoppingcart {
     width: 23%;
   }
+}
+
+.price {
+  font-size: 20px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
 }
