@@ -1,4 +1,4 @@
-const Shoppingcart = ({ shopcart }) => {
+const Shoppingcart = ({ shopcart, counter, setCounter }) => {
   // css is => Main.css
 
   return (
@@ -10,19 +10,34 @@ const Shoppingcart = ({ shopcart }) => {
           </div>
           <div className="buy-items-list">
             <div>
-              {shopcart.map((items, index) => {
+              {shopcart.map((item, index) => {
                 return (
                   <div key={index}>
-                    {items && (
+                    {item && (
                       <div className="price">
-                        <div className="">
-                          <span> + </span>
-                          num
-                          <span> - </span>
+                        <div>
+                          <span
+                            id="plus"
+                            onClick={() => {
+                              setCounter(counter + 1);
+                            }}
+                          >
+                            {" "}
+                            +{" "}
+                          </span>
+                          {counter && <p>{item.quantity}</p>}
+                          <span
+                            id="minus"
+                            onClick={() => {
+                              setCounter(counter - 1);
+                            }}
+                          >
+                            -
+                          </span>
                           {items.name}
                         </div>
                         <div>
-                          <span>{items.price}</span>
+                          <span>{items.price * items.quantity}€</span>
                         </div>
                       </div>
                     )}
@@ -31,8 +46,12 @@ const Shoppingcart = ({ shopcart }) => {
               })}
             </div>
             <div className="total">
-              <p> Sous-total : </p>
               <p> Frais de livraison : 2,50 €</p>
+              <p> Sous-total : {}</p>
+            </div>
+
+            <div>
+              <h3> Total </h3>
             </div>
           </div>
         </div>

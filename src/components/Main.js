@@ -10,6 +10,7 @@ function Main() {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [shopcart, setShopcart] = useState([]);
+  const [counter, setCounter] = useState(0);
 
   const fetchData = async () => {
     const response = await axios.get(
@@ -50,6 +51,8 @@ function Main() {
                             shopcart={shopcart}
                             setShopcart={setShopcart}
                             elements={elements}
+                            counter={counter}
+                            setCounter={setCounter}
                           />
                         );
                       })}
@@ -58,7 +61,11 @@ function Main() {
                 );
               })}
             </div>
-            <Shoppingcart shopcart={shopcart} />
+            <Shoppingcart
+              shopcart={shopcart}
+              counter={counter}
+              setCounter={setCounter}
+            />
           </div>
         </div>
       </div>
