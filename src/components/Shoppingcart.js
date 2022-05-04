@@ -22,6 +22,7 @@ const Shoppingcart = ({ shopcart, setShopcart }) => {
           <div className="buy-items-list">
             <div>
               {shopcart.map((item, index) => {
+                const quantityTotalPrice = item.quantity * item.price;
                 return (
                   <div key={index}>
                     {item && (
@@ -61,7 +62,7 @@ const Shoppingcart = ({ shopcart, setShopcart }) => {
                           <p> {item.title}</p>
                         </div>
                         <div className="pricebox-quantity">
-                          <p> {item.quantity * item.price}</p>
+                          <p> {quantityTotalPrice.toFixed(2)}</p>
                         </div>
                       </div>
                     )}
@@ -76,7 +77,7 @@ const Shoppingcart = ({ shopcart, setShopcart }) => {
               <p> Sous-total : {calculTotal().toFixed(2)}</p>
             </div>
 
-            <div>
+            <div className="stotal">
               <p>Total {stotal.toFixed(2)} € </p>
             </div>
           </div>
