@@ -26,18 +26,7 @@ const Shoppingcart = ({ shopcart, setShopcart }) => {
                   <div key={index}>
                     {item && (
                       <div className="price">
-                        <div>
-                          <span
-                            id="plus"
-                            onClick={() => {
-                              const newElement = [...shopcart];
-                              newElement[index].quantity++;
-                              setShopcart(newElement);
-                            }}
-                          >
-                            +
-                          </span>
-                          <span>{item.quantity}</span>
+                        <div className="pricebox-items">
                           <span
                             id="minus"
                             onClick={() => {
@@ -56,27 +45,39 @@ const Shoppingcart = ({ shopcart, setShopcart }) => {
                           >
                             -
                           </span>
-                          <div>
-                            {" "}
-                            <h3> {item.title}</h3>{" "}
-                          </div>
-                          <div>
-                            <p> {item.quantity * item.price}</p>
-                          </div>
+                          <span id="quantity">{item.quantity}</span>
+                          <span
+                            id="plus"
+                            onClick={() => {
+                              const newElement = [...shopcart];
+                              newElement[index].quantity++;
+                              setShopcart(newElement);
+                            }}
+                          >
+                            +
+                          </span>
+                        </div>
+                        <div className="pricebox-title">
+                          <p> {item.title}</p>
+                        </div>
+                        <div className="pricebox-quantity">
+                          <p> {item.quantity * item.price}</p>
                         </div>
                       </div>
                     )}
+                    <hr />
                   </div>
                 );
               })}
             </div>
+
             <div className="total">
               <p> Frais de livraison : 2,50 €</p>
               <p> Sous-total : {calculTotal().toFixed(2)}</p>
             </div>
 
             <div>
-              <h3>Total {stotal} €</h3>
+              <p>Total {stotal.toFixed(2)} € </p>
             </div>
           </div>
         </div>
