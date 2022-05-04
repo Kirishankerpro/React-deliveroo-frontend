@@ -34,10 +34,10 @@ const Shoppingcart = ({ shopcart, counter, setCounter }) => {
                           >
                             -
                           </span>
-                          {items.name}
+                          {item.name}
                         </div>
                         <div>
-                          <span>{items.price * items.quantity}€</span>
+                          <span>{item.price * item.quantity}€</span>
                         </div>
                       </div>
                     )}
