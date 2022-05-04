@@ -32,22 +32,25 @@ const Meals = ({
       className="boxelements-item"
       key={meals.id}
       onClick={() => {
+        const newElement = [...shopcart];
         const isItemAlreadyExist = shopcart.find(
           (item) => item.id === meals.id
         );
 
         if (isItemAlreadyExist === undefined) {
-          const newElement = [...shopcart];
+          console.log("item n'est pas dans le panier");
+
           newElement.push({
             id: meals.id,
-            name: meals.title,
+            title: meals.title,
             price: meals.price,
             quantity: 1,
           });
-          setShopcart(newElement);
         } else {
-          alert("produit déjà dans le panier");
+          console.log("produit déjà dans le panier alors vous ajoutez 1");
+          isItemAlreadyExist.quantity++;
         }
+        setShopcart(newElement);
       }}
     >
       <div className="items">
