@@ -1,4 +1,5 @@
 import "../assets/style/Main.css";
+import "../assets/style/Loading.css";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
@@ -13,7 +14,7 @@ function Main() {
 
   const fetchData = async () => {
     const response = await axios.get(
-      "https://deliveroo-backend-kingx.herokuapp.com/infos"
+      "https://deliveroo-backend-kingx.herokuapp.com/info"
     );
     // console.log(response.data);
     setData(response.data);
@@ -25,7 +26,10 @@ function Main() {
   }, []);
 
   return isLoading ? (
-    <span> En cours de chargement... </span>
+    <div className="loading">
+      <div class="loader"></div>
+      <h3> En cours de chargement... </h3>
+    </div>
   ) : (
     <div>
       <hr />
