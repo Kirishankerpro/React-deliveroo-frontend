@@ -14,7 +14,7 @@ function Main() {
 
   const fetchData = async () => {
     const response = await axios.get(
-      "https://deliveroo-backend-kingx.herokuapp.com/info"
+      "https://deliveroo-backend-kingx.herokuapp.com/infos"
     );
     // console.log(response.data);
     setData(response.data);
